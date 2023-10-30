@@ -1,0 +1,124 @@
+@import "./vars.scss";
+@import "./reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+*{
+  transition: .4s ease;
+}
+
+:root[data-theme="white"] {
+  --body-bg-color: white;
+
+  --post-main-color: #b54f4f;
+  --post-second-color: #4361ee;
+  --post-bg-color: #03aa837b;
+
+  --post-text-color: #3a0ca3;
+  --text-second-color: #4361ee4d;
+}
+
+:root[data-theme="dark"] {
+  --body-bg-color: #606060;
+
+  --post-main-color: #a8a8a8;
+  --post-second-color: #90a4ff;
+  --post-bg-color: #bffff07a;
+
+  --post-text-color: #c6adff;
+  --text-second-color: #d7ddf8;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--body-bg-color);
+}
+
+.box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  border: 1px solid black;
+  background-color: #a8a8a8;
+  gap: 20px;
+  margin: 20px;
+  .box-item {
+    color: white;
+    padding: 10px;
+    border-radius: 1rem;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+.active {
+  background-color: #4361ee;
+  border-bottom: 50%;
+}
+
+.prev {
+  background-color: #3a0ca3;
+}
+
+.next {
+  background-color: black;
+}
+
+
+
+.accardion {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 100px 0;
+  .accardion-item {
+    display: flex;
+    gap: 80px;
+    position: relative;
+    overflow: hidden;
+    max-width: 80px;
+    height: 80px;
+    padding: 5px;
+    cursor: pointer;
+h2,p,i{
+  z-index: 10;
+  color: white;
+}
+i{
+  z-index: 20;
+  padding:10px;
+  cursor: pointer;
+}
+p{
+  flex: 1;
+}
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .more{
+    gap: 20px;
+    max-width: 400px;
+    height: initial;
+    padding: 20px;
+    cursor: auto;
+    i{
+      position: absolute;
+      top: 5px;right: 0;
+    }
+  }
+}
+
+
+
+
+
